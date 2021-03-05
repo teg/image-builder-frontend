@@ -259,7 +259,7 @@ class CreateImageWizard extends Component {
                     {
                         architecture: this.state.arch,
                         image_type: 'ami',
-                        upload_requests: [ this.state.uploadAWS ],
+                        upload_request: [ this.state.uploadAWS ],
                     }],
                 customizations: {
                     subscription: this.state.subscription,
@@ -278,7 +278,7 @@ class CreateImageWizard extends Component {
                     {
                         architecture: this.state.arch,
                         image_type: 'gcp',
-                        upload_requests: [ upload_google ],
+                        upload_request: [ upload_google ],
                     }],
                 customizations: {
                     subscription: this.state.subscription,
