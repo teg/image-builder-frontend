@@ -106,15 +106,13 @@ const authPlugin = (req, res, target) => {
 
 
 
-routes[`/beta/${SECTION}/${APP_ID}`] = { host: `http://localhost:${FRONTEND_PORT}` };
-routes[`/${SECTION}/${APP_ID}`]      = { host: `http://localhost:${FRONTEND_PORT}` };
-routes[`/beta/apps/${APP_ID}`]       = { host: `http://localhost:${FRONTEND_PORT}` };
-routes[`/apps/${APP_ID}`]            = { host: `http://localhost:${FRONTEND_PORT}` };
-routes[`/api/${APP_ID}`]             = { host: `http://localhost:${API_PORT}` };
+routes[`/beta/${SECTION}/${APP_ID}`] = { host: `http://frontend:${FRONTEND_PORT}` };
+routes[`/${SECTION}/${APP_ID}`]      = { host: `http://frontend:${FRONTEND_PORT}` };
+routes[`/beta/apps/${APP_ID}`]       = { host: `http://frontend:${FRONTEND_PORT}` };
+routes[`/apps/${APP_ID}`]            = { host: `http://frontend:${FRONTEND_PORT}` };
+routes[`/api/${APP_ID}`]             = { host: `http://backend:${API_PORT}` };
 routes['/apps/chrome']               = { host: PORTAL_BACKEND_MARKER };
 routes['/apps/beta/chrome']          = { host: PORTAL_BACKEND_MARKER };
-routes[`/beta/config`]            =    { host: `http://localhost:8889` };
-routes[`/config`]                 =    { host: `http://localhost:8889` };
 
 module.exports = {
     bs: {
